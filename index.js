@@ -37,7 +37,8 @@ play.addEventListener('click',function(){
     for (var i = 0; i < btn.length; i++) {
         btn[i].addEventListener('click',function(){
             if ((turn.innerHTML)== "X's Turn"){
-                this.innerHTML = "x"
+                this.innerHTML = "X"
+                this.style.color = "red"
                 this.disabled = 'true'
                 turn.innerHTML = "O's Turn"
                 num += 1
@@ -45,6 +46,7 @@ play.addEventListener('click',function(){
                 checkdraw()
             } else {
                 this.innerHTML = "0"
+                this.style.color = "blue"
                 this.disabled = 'true'
                 turn.innerHTML = "X's Turn"
                 num += 1
@@ -62,7 +64,7 @@ play.addEventListener('click',function(){
                 for (var squareNum = i; squareNum<(i+size);squareNum += 1){
                     rowcheck.push(sq[squareNum].innerHTML);
                     }
-                if(rowcheck.every(array => array == "x") == true){
+                if(rowcheck.every(array => array == "X") == true){
                     alert("X's the winner")
                     disablebtn()
                     turn.innerHTML = "X's win the game"
@@ -79,7 +81,7 @@ play.addEventListener('click',function(){
                 for(var squareNum = i;squareNum < square;squareNum += size){
                     colcheck.push(sq[squareNum].innerHTML);
                 }
-                if(colcheck.every(array => array == "x")==true){
+                if(colcheck.every(array => array == "X")==true){
                     alert("X's the winner")
                     disablebtn()
                     turn.innerHTML = "X's win the game"
@@ -96,7 +98,7 @@ play.addEventListener('click',function(){
           diag1.push(sq[i].innerHTML);
         }
         }
-        if(diag1.every(array => array == "x")==true){
+        if(diag1.every(array => array == "X")==true){
             alert("X's the winner")
             disablebtn()
             turn.innerHTML = "X's win the game"
