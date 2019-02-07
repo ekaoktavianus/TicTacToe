@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+p {
+    text-align:center;
+}
+div {
+    vertical-align: middle;
+    text-align: center;
+}
+#wrap {
+    text-align: center;
+    width: 100%;
+}
+#redscore, #bluescore {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.board {
+    background: cyan;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.square {
+    width: 80px;
+    height: 80px;
+}
